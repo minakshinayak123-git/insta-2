@@ -1,5 +1,4 @@
 import { useRecoilState } from 'recoil'
-import { modalState } from '../atoms/modalAtom'
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useRef, useState } from 'react'
 import { CameraIcon } from '@heroicons/react/outline'
@@ -13,6 +12,7 @@ import {
 } from '@firebase/firestore'
 import { useSession } from 'next-auth/react'
 import { ref, getDownloadURL, uploadString } from '@firebase/storage'
+import { modalState } from '../atoms/modalAtom'
 
 const Modal = () => {
   const { data: session } = useSession()
